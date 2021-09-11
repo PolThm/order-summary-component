@@ -1,0 +1,91 @@
+section {
+  background: $pale-blue url("../../images/pattern-background-desktop.svg") no-repeat top center;
+  background-size: contain;
+  min-height: 100vh;
+  @include flex-center;
+}
+
+.order-summary {
+  max-width: 350px;
+  border-radius: $br-base;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+
+  img {
+    max-width: 100%;
+    margin-bottom: -5px;
+  }
+
+  &__body {
+    @include flex-column;
+    padding: $space-xl;
+    background: white;
+    text-align: center;
+
+    .title {
+      @include font-size($text-2xl);
+      font-weight: 900;
+      margin-bottom: $space-base;
+    }
+
+    .description {
+      margin-bottom: $space-lg;
+    }
+  }
+
+  .offer-plan {
+    display: flex;
+    justify-content: space-between;
+    background: $very-pale-blue;
+    border-radius: $br-base;
+    padding: $space-base;
+    margin-bottom: $space-lg;
+
+    &__infos {
+      display: flex;
+      gap: $space-base;
+
+      &-texts {
+        @include flex-column;
+        gap: $space-2xs;
+
+        h5 {
+          font-weight: 900;
+        }
+
+        p {
+          font-weight: 700;
+        }
+
+      }
+    }
+
+    .btn-3 {
+      color: $bright-blue;
+      text-decoration: underline;
+      @include font-size($text-sm);
+      font-weight: 700;
+
+      @include on-event {
+        text-decoration: unset;
+      }
+    }
+  }
+
+  .btn-1 {
+    background: $bright-blue;
+    margin-bottom: $space-lg;
+    padding: $space-sm;
+    color: white;
+  }
+
+  .btn-2 {
+    color: $desaturated-blue;
+    font-weight: 900;
+
+    @include on-event {
+      opacity: 1;
+      color: $dark-blue;
+    }
+  }
+}

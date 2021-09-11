@@ -1,0 +1,91 @@
+/**
+ * Basic typography style for copy text
+ */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+html {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, i {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+  color: $dark-blue;
+}
+
+h5 {
+  color: $dark-blue;
+}
+
+h6 {
+
+}
+
+p {
+  color: $desaturated-blue;
+  @include font-size($text-sm);
+  font-weight: 500;
+
+  &.p1 {
+
+  }
+
+  &.p2 {
+
+  }
+
+  &.p3 {
+
+  }
+}
+
+span {
+
+}
+
+a {
+
+}
+
+.thin {
+  font-weight: 100;
+}
+.extra-light {
+  font-weight: 200;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extra-bold {
+  font-weight: 800;
+}
+.black {
+  font-weight: 900;
+}
