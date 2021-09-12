@@ -1,5 +1,5 @@
 section {
-  background: $pale-blue url("../../images/pattern-background-desktop.svg") no-repeat top center;
+  background: $pale-blue url("../images/pattern-background-mobile.svg") no-repeat;
   background-size: contain;
   min-height: 100vh;
   @include flex-center;
@@ -7,20 +7,23 @@ section {
 
 .order-summary {
   max-width: 350px;
-  border-radius: $br-base;
+  border-radius: $br-lg;
   overflow: hidden;
   box-shadow: $box-shadow;
+  margin: $space-lg;
+  background: white;
 
-  img {
+  &__hero-img {
     max-width: 100%;
     margin-bottom: -5px;
   }
 
   &__body {
     @include flex-column;
-    padding: $space-xl;
-    background: white;
+    padding: $space-xl $space-lg;
     text-align: center;
+    max-width: 270px;
+    margin: auto;
 
     .title {
       @include font-size($text-2xl);
@@ -42,18 +45,24 @@ section {
     margin-bottom: $space-lg;
 
     &__infos {
-      display: flex;
+      @include flex-center-vert;
       gap: $space-base;
+
+      img {
+        @include box(35px)
+      }
 
       &-texts {
         @include flex-column;
         gap: $space-2xs;
 
         h5 {
+          @include font-size($text-xs);
           font-weight: 900;
         }
 
         p {
+          @include font-size($text-xs);
           font-weight: 700;
         }
 
@@ -63,7 +72,7 @@ section {
     .btn-3 {
       color: $bright-blue;
       text-decoration: underline;
-      @include font-size($text-sm);
+      @include font-size($text-xs);
       font-weight: 700;
 
       @include on-event {
@@ -75,8 +84,8 @@ section {
   .btn-1 {
     background: $bright-blue;
     margin-bottom: $space-lg;
-    padding: $space-sm;
     color: white;
+    box-shadow: hsla(245, 75%, 52%, 0.5) 0 7px 29px 0;
   }
 
   .btn-2 {
@@ -87,5 +96,11 @@ section {
       opacity: 1;
       color: $dark-blue;
     }
+  }
+}
+
+@include breakpoint($tablet) {
+  section {
+    background-image: url("../images/pattern-background-desktop.svg");
   }
 }

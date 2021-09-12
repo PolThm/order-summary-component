@@ -2,6 +2,7 @@ button {
   @include font-size($text-xs);
   font-weight: 700;
   border-radius: $br-base;
+  padding: $space-sm;
   @include transition(opacity color);
 
   @include on-event {
