@@ -14,8 +14,8 @@ section {
   background: white;
 
   &__hero-img {
+    display: block;
     max-width: 100%;
-    margin-bottom: -5px;
   }
 
   &__body {
